@@ -1,3 +1,262 @@
+<<<<<<< HEAD
+@import "nullstyle.scss";
+@import url('https://fonts.googleapis.com/css2?family=Bona+Nova+SC:ital,wght@0,400;0,700;1,400&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Macondo&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Orbitron:wght@400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Bona+Nova+SC:ital,wght@0,400;0,700;1,400&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Macondo&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Orbitron:wght@400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+body{
+    color: #fff;
+    font-family: "Open Sans", serif;
+}
+
+.container {
+    max-width: 1220px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+.header__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 22px;
+}
+.header__background{
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    z-index: -1;
+    object-fit:cover;
+}
+.header__menu-list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 38px;
+    font-weight: 700;
+}
+.header__menu-link {
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 12px;
+    &:hover{
+        color: #FFB548;
+    }
+}
+.header__right-wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+}
+.header__strip {
+    width: 1px;
+    height: 30px;
+    border: 0.87px solid rgb(255, 255, 255);
+    opacity: 0.5;
+    border-radius: 5px;
+}
+.header__game-service {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+}
+
+// dropwown =======
+
+.dropdown-wrapper{
+    width: 54px;
+    height: 65px;
+    border-radius: 3px;
+    background: rgba(0, 0, 0, 0.75);
+    flex-direction: column;
+    gap: 2px;
+    padding-top: 7px;
+    position: absolute;
+    top: 25px;
+    left: 2px;
+    display: none;
+}
+.language-dropdown{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.header__language-dropdown{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    position: relative;
+    top: 0;
+    left: 0;
+}
+.dropdown-button-language {
+    color: #fff;
+    background-color: inherit;
+    font-size: 12px;
+    line-height: 16px;
+    text-align: left;
+    letter-spacing: 10%;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-left: 14px;
+    &:hover{
+        color: #FFB548 !important;
+    }
+}
+.active{
+    display: block;
+}
+// burger =======
+.header__burger{
+    display: flex;
+    position: relative;
+    z-index: 10;
+    align-items: center;
+    justify-content: flex-end;   
+    width: 24px;
+    height: 18px;
+    display: none;
+    & span{
+        background-color: #fff;
+        height: 2px;
+        width: 100%;
+        transition: 0.3s;
+    }
+    &::before{
+        content: "";
+        background-color: #fff;
+        position: absolute;
+        height: 2px;
+        width: 100%;
+        top: 0;
+        transition: 0.3s;
+    }
+    &::after{
+        content: "";
+        background-color: #fff;
+        position: absolute;
+        bottom: 0;
+        height: 2px;
+        width: 70%;
+        transition: 0.3s;
+    }
+}
+.active-burger{
+    & span{
+        transform: scale(0);
+    }
+    &::before{
+        top: 50%;
+        transform: rotate(-45deg) translate(0, -50%);
+    }
+    &::after{
+        bottom: 50%;
+        width: 100%;
+        transform: rotate(45deg)  translate(0, 50%);
+    }
+}
+//===============
+.theme__title {
+    font-family: 'Bebas Neue';
+    font-size: 80px;
+    font-weight: 500;
+    line-height: 80px;
+    letter-spacing: 3px;
+    text-align: center;
+    text-transform: uppercase;
+    margin-top: 250px;
+}
+.theme__subtitle {
+    font-family: 'Bebas Neue';
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 2px;
+    text-align: center;
+    margin: 8px 0 28px 0;
+}
+.theme__buy-wrapper {
+    text-align: center;
+}
+.theme__buy-button {
+    width: 260px;
+    height: 60px;
+    color: rgb(26, 25, 23);
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: 700;
+    text-align: center;
+    border-radius: 4px;
+    background: linear-gradient(181.15deg, rgb(255, 181, 72) 10.819%,rgb(243, 175, 52) 90.765%);
+    & span {
+        width: 1px;
+        height: 24px;
+        border: 0.87px solid rgb(26, 25, 23);
+        opacity: 0.5;
+        margin: 0 14px;
+    } 
+}
+.anchor-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: absolute;
+    bottom: 2%;
+    left: 48%;
+    cursor: pointer;
+    &:hover{
+        color: #FFB548 !important;
+    }
+}
+.anchor__title {
+    font-size: 12px;
+    line-height: 22px;
+    letter-spacing: 0px;
+    text-align: justify;
+    text-transform: uppercase;
+}
+// media ---------------
+@media (max-width: 800px){
+    .header__menu-list{
+        gap: 20px;
+    }
+}
+@media (max-width: 767px) {
+    .header__menu-list{
+        display: none;
+        flex-direction: column;
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        background-color: #000;
+        opacity: 0.9;
+        z-index: 5;
+        top: 0;
+        left: 0;
+    }
+    .open{
+        display: flex;
+    }
+    .header__game-service{
+        display: none;
+    }
+    .header__burger{
+        display: flex;
+    }
+    .theme__title{
+        font-size: 40px;
+        line-height: 120%;
+    }
+    .theme__subtitle{
+        font-size: 15px;
+    }
+    .theme__title{
+        margin-top: 100vh - 50%;
+    }
+}
+=======
 @import "nullstyle.scss";
 @import url('https://fonts.googleapis.com/css2?family=Bona+Nova+SC:ital,wght@0,400;0,700;1,400&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Macondo&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Orbitron:wght@400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Bona+Nova+SC:ital,wght@0,400;0,700;1,400&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Macondo&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Orbitron:wght@400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
@@ -252,4 +511,5 @@ body{
         font-size: 15px;
     }
 }
+>>>>>>> 31a06d24ec6686e7d4cf3026dc3ea2483d3e840f
 //==============

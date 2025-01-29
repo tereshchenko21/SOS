@@ -11,11 +11,21 @@ const translations = {
         title: 'SURVIVE AT ALL COSTS',
         subtitle: 'Experience new social battle royale game',
         story: 'The story',
+        menuMain: 'main',
+        menuAbout: 'about',
+        menuFeatures: 'game features',
+        menuSystem: 'system requirements',
+        menuQuotes: 'quotes',
     }, 
     ru: {
         title: 'ВЫЖИТЬ ЛЮБОЙ ЦЕНОЙ',
         subtitle: 'Испытайте новую социальную игру battle royale',
         story: 'История',
+        menuMain: 'меню',
+        menuAbout: 'о нас',
+        menuFeatures: 'особенности игры',
+        menuSystem: 'системные требования',
+        menuQuotes: 'вопросы',
     }
 }
 
@@ -32,6 +42,7 @@ burger.onclick = function() {
 
 dropdown.onclick = function(event) {
     currentLang = event.target.id === 'drop-eng' ? 'en' : 'ru' // выбор текущего языка
+    dropdownButton.innerHTML = currentLang === 'en' ? 'eng' : 'rus'
     dropdown.classList.remove('active') // закрывает dropdown после нажатия на кнопку
     translate(currentLang) 
 }

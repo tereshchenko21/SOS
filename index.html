@@ -6,6 +6,7 @@
     <title>SOS</title>
     <link rel="shortcut icon" href="">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
 </head>
 <body>
     <header class="header">
@@ -70,34 +71,30 @@
                     </div>
                 </div>
             </div>
+            <div class="theme_wrapper">
+                <div class="theme__title" data-translate="title">
+                    SURVIVE AT ALL COSTS
+                </div>
+                <div class="theme__subtitle" data-translate="subtitle">
+                    Experience new social battle royale game
+                </div>
+                <div class="theme__buy-wrapper">
+                    <button class="theme__buy-button">Buy Now on Steam <span></span> $14.99</button>
+                </div>
+            </div>
+            <div class="anchor-wrapper" id="anchor">
+                <div class="anchor__title">
+                    <a href="#about" data-translate="story">The story</a>
+                </div>
+                <div class="anchor__arrow-down">
+                    <img src="./img/scroll-arrow-down.svg" alt="">
+                </div>
+            </div>
         </div>
     </header>
     <main class="main">
-        <section class="theme">
-            <div class="container">
-                <div class="theme_wrapper">
-                    <div class="theme__title" data-translate="title">
-                        SURVIVE AT ALL COSTS
-                    </div>
-                    <div class="theme__subtitle" data-translate="subtitle">
-                        Experience new social battle royale game
-                    </div>
-                    <div class="theme__buy-wrapper">
-                        <button class="theme__buy-button">Buy Now on Steam <span></span> $14.99</button>
-                    </div>
-                </div>
-                <div class="anchor-wrapper" id="anchor">
-                    <div class="anchor__title" data-translate="story">
-                        The story
-                    </div>
-                    <div class="anchor__arrow-down">
-                        <img src="./img/scroll-arrow-down.svg" alt="">
-                    </div>
-                </div>
-            </div>
-        </section>
         <section class="about">
-            <div class="about__background">
+            <div class="about__background" id="about">
                 <img src="./img/bg2.jpeg" alt="">
             </div>
             <div class="container">
@@ -109,19 +106,33 @@
                         <div class="about__title">
                             social battle royale game
                         </div>
+                        <div class="about-line"></div>
                         <div class="about__story-game">
-                            Each round, you and 15 other contestants compete toescape a deadly island filled with monsters. The trick is: three people can survive. Will you runsolo or form friendships with others to escape? 
+                            Each round, <span>you</span> and <span>15</span> other contestants compete toescape a deadly island filled with monsters. The trick is: <span>three</span> people can survive. Will you runsolo or form friendships with others to escape? 
 
                             Making the right decisions could be thedifference between life and death.
                         </div>
                     </div>
-                    <div class="about__slider">
-
+                    <div class="swiper mySwiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <img src="./img/slider/1.jpeg" alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="./img/slider/2.jpeg" alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="./img/slider/3.jpeg" alt="">
+                            </div>
+                        </div>
+                        <div class="swiper-pagination"></div>
                     </div>
+                    <img class="swiper-button-next" src="./img/slider/switch.svg" alt="">
                 </div>
             </div>
         </section>
     </main>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="./js/script.js"></script>
 </body>
 </html>

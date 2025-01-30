@@ -5,6 +5,17 @@ const burger = document.getElementById('burger')
 const menuList = document.getElementById('menu')
 const ruLangButton = document.getElementById('drop-rus')
 const enLangButton = document.getElementById('drop-eng')
+const swiper = new Swiper('.mySwiper', {
+    spaceBetween: 30,
+    navigation: {
+        nextEl: '.swiper-button-next',
+    },
+    pagination: {
+        el: 'swiper-pagination',
+    },
+    mousewhell: true,
+    loop: true,
+}) 
 
 const translations = {
     en: {
